@@ -36,9 +36,12 @@ describe('Test Order', () => {
       </OrderContext.Provider>
     );
     //Assert: replace the return true.
+    // await waitFor(() => {
+    //   return true;
+    // });
     await waitFor(() => {
-      return true;
-    });
+  expect(screen.getAllByText('$2.50')).toHaveLength(1);
+});
   });
 
   test('Test Update Delivery Fee', async () => {
@@ -62,9 +65,13 @@ describe('Test Order', () => {
       screen.getByRole('option', { name: '5 miles' })
     );
     //Assert: replace the return true.
+    // await waitFor(() => {
+    //   return true;
+    // });
     await waitFor(() => {
-      return true;
-    });
+  expect(screen.getAllByText('$5.00'))
+    .toHaveLength(1);
+});
   });
 });
 

@@ -42,6 +42,7 @@ jobs:
     container: cypress/included:10.3.0
     defaults:
       run:
+      
         working-directory: frontend
     steps:
       - uses: actions/checkout@v4
